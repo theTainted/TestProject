@@ -10,7 +10,8 @@ public class HomePage {
 
     @FindBy(xpath = "//button[@class='ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close']")
     WebElement btnClickCloseOnNewsLetter;
-
+    @FindBy(xpath="//a[@class='btn-cancel c09__close c09__close--cookie']")
+    WebElement btnClickOnCloseInCookies;
 
     public HomePage(WebDriver driver) {
         General.driver = driver;
@@ -18,9 +19,16 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void ClickOnCloseButtonInNewsLetter() {
+    public void clickOnCloseButtonInNewsLetter() {
         try {
             btnClickCloseOnNewsLetter.click();
+        } catch (NoSuchElementException e) {
+            e.getStackTrace();
+        }
+    }
+    public void clickOnCloseOnCloseInCookies() {
+        try {
+            btnClickOnCloseInCookies.click();
         } catch (NoSuchElementException e) {
             e.getStackTrace();
         }

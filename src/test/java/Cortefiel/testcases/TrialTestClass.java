@@ -1,5 +1,6 @@
 package Cortefiel.testcases;
 
+        import Cortefiel.pageobjects.HomePage;
         import org.openqa.selenium.By;
         import org.openqa.selenium.WebDriver;
         import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +15,9 @@ public class TrialTestClass {
         String sURL = "https://"+"storefront"+":"+"storefront"+"@"+"development.cortefiel.com/es/es";
         driver.get(sURL);
         driver.manage().window().maximize();
-
+        HomePage homePage = new HomePage(driver);
+        homePage.clickOnCloseButtonInNewsLetter();
+        homePage.clickOnCloseOnCloseInCookies();
 
     }
 }
