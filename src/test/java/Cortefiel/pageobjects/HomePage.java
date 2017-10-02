@@ -22,15 +22,19 @@ public class HomePage {
     public void clickOnCloseButtonInNewsLetter() {
         try {
             btnClickCloseOnNewsLetter.click();
+            System.out.println("click");
         } catch (NoSuchElementException e) {
             e.getStackTrace();
+            System.out.println("error");
         }
     }
     public void clickOnCloseOnCloseInCookies() {
         try {
             btnClickOnCloseInCookies.click();
+            System.out.println("clickCookies");
         } catch (NoSuchElementException e) {
             e.getStackTrace();
+            System.out.println("errorCookies");
         }
     }
 }
