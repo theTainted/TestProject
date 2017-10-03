@@ -6,9 +6,29 @@ package Cortefiel.testcases;
         import org.openqa.selenium.chrome.ChromeDriver;
         import org.openqa.selenium.support.ui.ExpectedConditions;
         import org.openqa.selenium.support.ui.WebDriverWait;
+        import org.testng.annotations.BeforeClass;
+        import org.testng.annotations.Parameters;
+        import org.testng.annotations.Test;
 
 public class TrialTestClass {
-    public static void main (String[] args){
+
+@Parameters("browser")
+@BeforeClass
+public void getBrowser(String browser){
+
+}
+
+
+
+
+
+
+
+
+
+
+    @Test
+    public void testTrialTestClass(){
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
         driver = new ChromeDriver();
